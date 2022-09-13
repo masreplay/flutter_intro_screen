@@ -11,7 +11,7 @@ import 'package:flutter_intro_screen/flutter_intro_screen.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    final widget = IntroScreen(
+    final widget = FlutterIntroScreen(
       appLogo: Row(
         children: [
           const Text("Splash"),

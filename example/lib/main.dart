@@ -20,19 +20,19 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: showIntroScreen ? const LandingPage() : const MyHomePage(),
+      home: showIntroScreen ? const IntroScreen() : const MyHomePage(),
     );
   }
 }
 
-class LandingPage extends StatefulWidget {
-  const LandingPage({Key? key}) : super(key: key);
+class IntroScreen extends StatefulWidget {
+  const IntroScreen({Key? key}) : super(key: key);
 
   @override
-  State<LandingPage> createState() => _LandingPageState();
+  State<IntroScreen> createState() => _IntroScreenState();
 }
 
-class _LandingPageState extends State<LandingPage> {
+class _IntroScreenState extends State<IntroScreen> {
   @override
   Widget build(BuildContext context) {
     const colors = IntroColors(
@@ -42,7 +42,7 @@ class _LandingPageState extends State<LandingPage> {
     );
 
     return Scaffold(
-      body: IntroScreen(
+      body: FlutterIntroScreen(
         onCompletePressed: () {
           Navigator.of(context).push(
             MaterialPageRoute(

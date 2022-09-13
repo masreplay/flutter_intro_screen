@@ -73,7 +73,7 @@ class IntroInsets {
   });
 }
 
-class IntroScreen extends StatefulWidget {
+class FlutterIntroScreen extends StatefulWidget {
   final List<IntroPageData> pageData;
   final IntroMessages messages;
   final IntroText texts;
@@ -85,7 +85,7 @@ class IntroScreen extends StatefulWidget {
   final Widget appLogo;
   final Widget centerWidget;
 
-  const IntroScreen({
+  const FlutterIntroScreen({
     Key? key,
     required this.appLogo,
     required this.centerWidget,
@@ -99,10 +99,10 @@ class IntroScreen extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  State<IntroScreen> createState() => _IntroScreenState();
+  State<FlutterIntroScreen> createState() => _FlutterIntroScreenState();
 }
 
-class _IntroScreenState extends State<IntroScreen> {
+class _FlutterIntroScreenState extends State<FlutterIntroScreen> {
   static const double _imageSize = 264;
   static const double _logoHeight = 126;
   static const double _textHeight = 155;
@@ -188,7 +188,7 @@ class _IntroScreenState extends State<IntroScreen> {
           ),
 
           // placeholder gap for text:
-          const Gap(_IntroScreenState._textHeight),
+          const Gap(_FlutterIntroScreenState._textHeight),
 
           // page indicator:
           Container(
@@ -301,11 +301,11 @@ class _Page extends StatelessWidget {
       child: Column(
         children: [
           const Spacer(),
-          const Gap(
-              _IntroScreenState._imageSize + _IntroScreenState._logoHeight),
+          const Gap(_FlutterIntroScreenState._imageSize +
+              _FlutterIntroScreenState._logoHeight),
           SizedBox(
-            height: _IntroScreenState._textHeight,
-            width: _IntroScreenState._imageSize,
+            height: _FlutterIntroScreenState._textHeight,
+            width: _FlutterIntroScreenState._imageSize,
             child: IntroStaticTextScale(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -317,7 +317,7 @@ class _Page extends StatelessWidget {
               ),
             ),
           ),
-          const Gap(_IntroScreenState._pageIndicatorHeight),
+          const Gap(_FlutterIntroScreenState._pageIndicatorHeight),
           const Spacer(flex: 2),
         ],
       ),
