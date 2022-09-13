@@ -24,8 +24,8 @@ void main() {
       ),
       pageData: [
         IntroPageData(
-          title: "World's First",
-          description: "The world's first real estate app",
+          title: const Text("World's First"),
+          description: const Text("The world's first real estate app"),
           image: Image.asset(
             "assets/images/intro-1.jpg",
             fit: BoxFit.cover,
@@ -33,8 +33,8 @@ void main() {
           ),
         ),
         IntroPageData(
-          title: "Google Map support",
-          description: "Full support to iraq map",
+          title: const Text("Google Map support"),
+          description: const Text("Full support to iraq map"),
           image: Image.asset(
             "assets/images/intro-2.jpg",
             fit: BoxFit.cover,
@@ -42,6 +42,8 @@ void main() {
           ),
         ),
       ],
+      centerWidget: Container(),
+      onNextPressed: () {},
     );
 
     // Build our app and trigger a frame.
@@ -58,7 +60,7 @@ void main() {
     expect(find.text("Google Map support"), findsNothing);
 
     // // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byKey(Key("World's First")));
+    await tester.tap(find.byKey(const Key("World's First")));
     await tester.pump();
 
     // // Verify that our counter has incremented.
