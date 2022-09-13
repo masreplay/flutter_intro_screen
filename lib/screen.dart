@@ -80,7 +80,7 @@ class IntroScreen extends StatefulWidget {
   final IntroInsets insets;
   final IntroDurations durations;
   final IntroColors colors;
-  final VoidCallback onNextPressed;
+  final VoidCallback onCompletePressed;
 
   final Widget appLogo;
   final Widget centerWidget;
@@ -90,7 +90,7 @@ class IntroScreen extends StatefulWidget {
     required this.appLogo,
     required this.centerWidget,
     required this.pageData,
-    required this.onNextPressed,
+    required this.onCompletePressed,
     this.messages = const IntroMessages(),
     this.insets = const IntroInsets(),
     this.durations = const IntroDurations(),
@@ -116,11 +116,6 @@ class _IntroScreenState extends State<IntroScreen> {
   void dispose() {
     _pageController.dispose();
     super.dispose();
-  }
-
-  void _handleIntroCompletePressed() {
-    // context.go(ScreenPaths.home);
-    // settingsLogic.hasCompletedOnboarding.value = true;
   }
 
   void _handlePageChanged() {
@@ -244,7 +239,7 @@ class _IntroScreenState extends State<IntroScreen> {
           duration: widget.durations.fast,
           child: FloatingActionButton.small(
             elevation: 0,
-            onPressed: _handleIntroCompletePressed,
+            onPressed: widget.onCompletePressed,
             tooltip: widget.messages.swap,
             backgroundColor: widget.colors.button,
             child: const Icon(Icons.arrow_forward_ios_rounded),

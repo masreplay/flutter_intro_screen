@@ -43,7 +43,15 @@ class _LandingPageState extends State<LandingPage> {
 
     return Scaffold(
       body: IntroScreen(
-        onNextPressed: () {},
+        onCompletePressed: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) {
+                return const MyHomePage();
+              },
+            ),
+          );
+        },
         colors: colors,
         appLogo: _buildAppLogo(),
         pageData: _buildPageData(),
@@ -126,8 +134,9 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
+    return Scaffold(
+      appBar: AppBar(),
+      body: const Center(
         child: Text('Flutter Demo Home Page'),
       ),
     );

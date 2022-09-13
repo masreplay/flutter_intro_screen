@@ -43,7 +43,7 @@ void main() {
         ),
       ],
       centerWidget: Container(),
-      onNextPressed: () {},
+      onCompletePressed: () {},
     );
 
     // Build our app and trigger a frame.
