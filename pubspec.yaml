@@ -1,7 +1,7 @@
 name: intro_screen
-description: A new Flutter package project.
+description: Flutter simple splash screen with minimum configuration
 version: 0.0.1
-homepage: 
+homepage: https://github.com/masreplay/flutter_intro_screen
 
 environment:
   sdk: ">=2.18.0 <3.0.0"

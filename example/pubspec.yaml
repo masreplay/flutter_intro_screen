@@ -18,6 +18,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  # replace it with intro_screen: 0.0.1
   intro_screen:
     path: ../../intro_screen
 
