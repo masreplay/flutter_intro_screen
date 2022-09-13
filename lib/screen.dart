@@ -4,8 +4,8 @@ import 'package:flutter_animate/animate.dart';
 import 'package:flutter_animate/effects/effects.dart';
 import 'package:flutter_animate/num_duration_extensions.dart';
 import 'package:gap/gap.dart';
-import 'package:intro_screen/default_text_color.dart';
-import 'package:intro_screen/indicator.dart';
+import 'package:flutter_intro_screen/default_text_color.dart';
+import 'package:flutter_intro_screen/indicator.dart';
 
 class IntroDurations {
   final Duration fast;
